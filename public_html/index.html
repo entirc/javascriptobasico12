@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="shortcut icon" href="Retro.png"/>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>ENTI Javascript #3</div>
+    </body>
+
+    <script>
+        // pop() remove o último elemento
+        // shift() remove o primeiro elemento
+        // push("parâmetro" ou mais) adiciona um elemento na última posição
+        // unshift("parâmetro" ou mais) adiciona um elemento na primeira posição
+        // splice consegue remover e adicionar ao mesmo tempo nome.splice(0,2,"Outro");
+        // slice copia elementos para outro array nome.slice(posição, elemento);
+        var nome = ["fernanda", "antônio", "sarah", "amanda", "eduardo", "joão"];
+        var sobreNome = ["sousa", "castro", "medeiros", "oliveira", "cavalcanti", "ferreira"];
+
+        var nomeCompleto = [];
+
+        /*   for(var i=0; i<nome.length; i++){
+         for(var j=0; j<sobreNome.length; j++){ 
+         nomeCompleto.push(nome[i].toLowerCase()+" "+sobreNome[j].toLowerCase());
+         }
+         }*/
+
+        // var qualONome = prompt("Qual o nome que você \n\
+        //está procurando?");
+
+        var achou = false;
+        var letra = 'michel adriano medeiros';
+        var nomeCompleto;
+        for (var i = 0; i < letra.length; i++) {
+            var letraAtual = letra.slice(i, i + 1);
+            //console.log(letraAtual);
+            if (i == 0) {
+                letraAtual = letra.charAt(0).toUpperCase();
+                nomeCompleto = letraAtual;
+            } else if (letraAtual === " ") {
+                letraAtual = letra.slice(i, i + 2).toUpperCase();
+                nomeCompleto = nomeCompleto + letraAtual;
+                i++;
+            }else{
+                letraAtual = letra.slice(i, i + 1).toLowerCase();
+                nomeCompleto = nomeCompleto + letraAtual;
+            }
+        }
+        
+        console.log(nomeCompleto);
+
+        //if(achou == false){
+        //   console.log(qualONome + " não foi encontrado.");
+        //  }
+
+
+        /*  var nome = "Michel Adriano Medeiros";
+         var primeiroCaracter = nome.slice(10, -2);
+         
+         console.log(primeiroCaracter);*/
+
+        /*  nome = 'angelo rubin'
+         console.log(nome.charAt(0));
+         console.log(nome.charAt(7));
+         
+         var primeiraLetra = nome.charAt(0).toUpperCase();
+         var restanteNome = nome.slice(1,6);
+         var primeiraSN = nome.charAt(7).toUpperCase();
+         var restanteSN = nome.slice(8);
+         
+         var nomeCompleto = primeiraLetra+restanteNome+" "+primeiraSN+restanteSN;
+         
+         console.log(nomeCompleto);*/
+
+
+
+
+    </script>
+
+</html>
+
