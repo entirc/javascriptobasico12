@@ -12,7 +12,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>ENTI Javascript #3</div>
+        <div>ENTI Javascript #5</div>
     </body>
 
     <script>
@@ -22,10 +22,10 @@ and open the template in the editor.
         // unshift("parâmetro" ou mais) adiciona um elemento na primeira posição
         // splice consegue remover e adicionar ao mesmo tempo nome.splice(0,2,"Outro");
         // slice copia elementos para outro array nome.slice(posição, elemento);
-        var nome = ["fernanda", "antônio", "sarah", "amanda", "eduardo", "joão"];
-        var sobreNome = ["sousa", "castro", "medeiros", "oliveira", "cavalcanti", "ferreira"];
+        //  var nome = ["fernanda", "antônio", "sarah", "amanda", "eduardo", "joão"];
+        // var sobreNome = ["sousa", "castro", "medeiros", "oliveira", "cavalcanti", "ferreira"];
 
-        var nomeCompleto = [];
+        //   var nomeCompleto = [];
 
         /*   for(var i=0; i<nome.length; i++){
          for(var j=0; j<sobreNome.length; j++){ 
@@ -36,54 +36,112 @@ and open the template in the editor.
         // var qualONome = prompt("Qual o nome que você \n\
         //está procurando?");
 
-        var achou = false;
-        var letra = 'michel adriano medeiros';
-        var nomeCompleto;
-        for (var i = 0; i < letra.length; i++) {
-            var letraAtual = letra.slice(i, i + 1);
-            //console.log(letraAtual);
-            if (i == 0) {
-                letraAtual = letra.charAt(0).toUpperCase();
-                nomeCompleto = letraAtual;
-            } else if (letraAtual === " ") {
-                letraAtual = letra.slice(i, i + 2).toUpperCase();
-                nomeCompleto = nomeCompleto + letraAtual;
-                i++;
-            }else{
-                letraAtual = letra.slice(i, i + 1).toLowerCase();
-                nomeCompleto = nomeCompleto + letraAtual;
-            }
-        }
+        /*A função Math.round () retorna o valor de um número 
+         arredondado para o número inteiro mais próximo.*/
+        //var numero = Math.round(10.5);
+        // console.log(numero);
+
+        //sempre arredonda para cima.
+        //var numero1 = Math.ceil(1.4);
+        //console.log(numero1);
+
+        //sempre arredonda para baixo.
+        //var numero2 = Math.floor(1.9);
+        //console.log(numero2);
+
+        //0.000000 à 0.999999
+        //var numero3 = Math.random();
+        //console.log(numero3);
+
+        //capturar valores do zero ao seis
+        /*  var valor = Math.random()*6;
+         console.log(valor);
+         
+         if(valor > 1){
+         valor = Math.random()*7;
+         console.log("segundo random " + valor);
+         }
+         
+         valor = Math.floor(valor);
+         console.log("Resultado " + valor);*/
+
+        //funciona menos com adição
+        // var teste = "200" - "150";
+        // console.log("Resultado " + teste);
+
+        //funciona menos com adição
+        //var teste1 = "200" - 100;
+        //console.log("Resultado " + teste1);
+
+        //Não fuciona, aparecerá o valor NaN = Not a Number
+        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN
+        //var teste2 = "200" - "michel";
+        //console.log("Resultado " + teste2);
+
+        //concatena os valores
+        //var teste3 = "200" + "michel";
+        //console.log("Resultado " + teste3);
+
+        //funciona
+        /* var numero = prompt("Digite um número: ");
+         
+         var numeroFinal = numero - 10;
+         console.log("NF " + numeroFinal);
+         
+         //concatena
+         var numeroFinal1 = numero + 10;
+         console.log("NF1 " + numeroFinal1);*/
+
+        /*  var numero = prompt("Digite um número: ");
+         console.log(parseInt(numero));
+         var numeroFinal2 = parseInt(numero) + 10;
+         console.log("Resultado 1: " + numeroFinal2);
+         
+         var numeroFinal3 = parseInt(Math.round(numero)) + 10;
+         console.log(parseInt(Math.round(numero)));
+         console.log("Resultado 2: " + numeroFinal3);
+         */
+
+        /* var numero = prompt("Digite um número: ");
+         var numeroFinal4 = parseFloat(numero) + 10;
+         console.log("NF4 " + numeroFinal4);
+         */
+
+        //https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Global_Objects/Number
+        //Number converte números decimais ou inteiros sem utilizar o método parse...
+        /*var numero = "30";
+         numero = Number(numero) + 10;
+         console.log(numero);*/
+
+        //toString para converter números para String
+        /*var numeroString = 10;
+         console.log(typeof numeroString);
+         numeroString = numeroString.toString() + 10;
+         console.log(typeof numeroString.toString());
+         console.log(numeroString);*/
+
+
+        /* var preco = 30.55;
+         var total = preco * 1.5;
+         console.log(total);
+         
+         var total2D = total.toFixed(2);
+         console.log(total2D);
+         
+         var total2D1 = total.toFixed();
+         console.log(total2D1);*/
+
+        var numeroTeste = 1.555;
+        numeroTeste = numeroTeste.toFixed(2);
+        console.log(numeroTeste);
         
-        console.log(nomeCompleto);
-
-        //if(achou == false){
-        //   console.log(qualONome + " não foi encontrado.");
-        //  }
-
-
-        /*  var nome = "Michel Adriano Medeiros";
-         var primeiroCaracter = nome.slice(10, -2);
-         
-         console.log(primeiroCaracter);*/
-
-        /*  nome = 'angelo rubin'
-         console.log(nome.charAt(0));
-         console.log(nome.charAt(7));
-         
-         var primeiraLetra = nome.charAt(0).toUpperCase();
-         var restanteNome = nome.slice(1,6);
-         var primeiraSN = nome.charAt(7).toUpperCase();
-         var restanteSN = nome.slice(8);
-         
-         var nomeCompleto = primeiraLetra+restanteNome+" "+primeiraSN+restanteSN;
-         
-         console.log(nomeCompleto);*/
-
-
-
+        console.log(Math.ceil(numeroTeste).toFixed(2));
+        console.log(Math.floor(numeroTeste).toFixed(2));
+        
+        
 
     </script>
+
 
 </html>
 
