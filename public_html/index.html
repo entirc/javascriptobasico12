@@ -12,7 +12,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>ENTI Javascript #5</div>
+        <div>ENTI Javascript #6</div>
     </body>
 
     <script>
@@ -33,112 +33,132 @@ and open the template in the editor.
          }
          }*/
 
-        // var qualONome = prompt("Qual o nome que você \n\
-        //está procurando?");
+        /*   Links
+         * http://devdocs.io
+         */
 
-        /*A função Math.round () retorna o valor de um número 
-         arredondado para o número inteiro mais próximo.*/
-        //var numero = Math.round(10.5);
-        // console.log(numero);
-
-        //sempre arredonda para cima.
-        //var numero1 = Math.ceil(1.4);
-        //console.log(numero1);
-
-        //sempre arredonda para baixo.
-        //var numero2 = Math.floor(1.9);
-        //console.log(numero2);
-
-        //0.000000 à 0.999999
-        //var numero3 = Math.random();
-        //console.log(numero3);
-
-        //capturar valores do zero ao seis
-        /*  var valor = Math.random()*6;
-         console.log(valor);
+        /*   var valorBaixo = 1.554;
+         var valorMedio = 1.555;
+         var valorAlto = 1.556;
          
-         if(valor > 1){
-         valor = Math.random()*7;
-         console.log("segundo random " + valor);
+         console.log("valorBaixo " + valorBaixo.toFixed(2));
+         console.log("valorMedio " + valorMedio.toFixed(2));
+         console.log("valorAlto " + valorAlto.toFixed(2));
+         
+         //transforma o valorMedio em String
+         var valor = valorMedio.toString();
+         console.log("valor: " + valor);
+         
+         if (valor[4] == "5") {
+         var valorAux = valor.slice(3, 4);
+         
+         //transforma o valorAux em número
+         valorAux = Number(valorAux) + 1;
+         console.log("valorAux " + valorAux);
+         
+         var valorFinal = valor.slice(0, 3) + valorAux;
+         console.log("Tipo " + typeof valorFinal);
+         console.log("valorFinal " + valorFinal);
+         
+         
          }
-         
-         valor = Math.floor(valor);
-         console.log("Resultado " + valor);*/
-
-        //funciona menos com adição
-        // var teste = "200" - "150";
-        // console.log("Resultado " + teste);
-
-        //funciona menos com adição
-        //var teste1 = "200" - 100;
-        //console.log("Resultado " + teste1);
-
-        //Não fuciona, aparecerá o valor NaN = Not a Number
-        //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NaN
-        //var teste2 = "200" - "michel";
-        //console.log("Resultado " + teste2);
-
-        //concatena os valores
-        //var teste3 = "200" + "michel";
-        //console.log("Resultado " + teste3);
-
-        //funciona
-        /* var numero = prompt("Digite um número: ");
-         
-         var numeroFinal = numero - 10;
-         console.log("NF " + numeroFinal);
-         
-         //concatena
-         var numeroFinal1 = numero + 10;
-         console.log("NF1 " + numeroFinal1);*/
-
-        /*  var numero = prompt("Digite um número: ");
-         console.log(parseInt(numero));
-         var numeroFinal2 = parseInt(numero) + 10;
-         console.log("Resultado 1: " + numeroFinal2);
-         
-         var numeroFinal3 = parseInt(Math.round(numero)) + 10;
-         console.log(parseInt(Math.round(numero)));
-         console.log("Resultado 2: " + numeroFinal3);
          */
 
-        /* var numero = prompt("Digite um número: ");
-         var numeroFinal4 = parseFloat(numero) + 10;
-         console.log("NF4 " + numeroFinal4);
+        /*
+         * Date
+         Cria uma instância de JavaScript Date que representa um 
+         único momento no tempo. Os objetos de data são baseados 
+         em um valor de tempo que é o número de milissegundos desde 
+         01 de janeiro de 1970 UTC.
          */
 
-        //https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Global_Objects/Number
-        //Number converte números decimais ou inteiros sem utilizar o método parse...
-        /*var numero = "30";
-         numero = Number(numero) + 10;
-         console.log(numero);*/
-
-        //toString para converter números para String
-        /*var numeroString = 10;
-         console.log(typeof numeroString);
-         numeroString = numeroString.toString() + 10;
-         console.log(typeof numeroString.toString());
-         console.log(numeroString);*/
-
-
-        /* var preco = 30.55;
-         var total = preco * 1.5;
-         console.log(total);
+        /*    var agora = new Date();
+         console.log(typeof agora);
+         console.log("agora " + agora);
          
-         var total2D = total.toFixed(2);
-         console.log(total2D);
+         // agora = agora.toString();
+         //console.log("Data em String " + agora);
          
-         var total2D1 = total.toFixed();
-         console.log(total2D1);*/
+         var hoje = agora.getDay();
+         console.log("hoje " + hoje);
+         
+         var nomesDosDiasDaSemanaBR =
+         ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+         
+         var nomesDosDiasDaSemanaUS =
+         ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+         
+         var nomeDoDiaDeHojeBR = nomesDosDiasDaSemanaBR[hoje];
+         console.log("Dias da semana BR " + nomeDoDiaDeHojeBR);
+         
+         var mes = agora.getMonth();
+         console.log("mês " + mes);
+         
+         var diaDeHoje = agora.getDate();
+         console.log("dia de hoje " + diaDeHoje);
+         
+         var anoAtual = agora.getFullYear();
+         console.log("Ano atual " + anoAtual);
+         
+         var horarioAtual = agora.getHours();
+         console.log("Horário atual sem os minutos " + horarioAtual);
+         
+         var minutoAtual = agora.getMinutes();
+         console.log("Minuto atual sem os segundos " + minutoAtual);
+         
+         var segundoAtual = agora.getSeconds();
+         console.log("Segundo atual sem os milisegundos " + segundoAtual);
+         
+         var milisegundoAtual = agora.getMilliseconds();
+         console.log("milisegundos " + milisegundoAtual);        
+         */
 
-        var numeroTeste = 1.555;
-        numeroTeste = numeroTeste.toFixed(2);
-        console.log(numeroTeste);
+        /*http://momentjs.com/
+         uma das libraries mais conhecidas de manipulação de datas em JS*/
+        /* var hoje = new Date();
+         var datAlvo = new Date("December 6, 2078");
+         console.log("datAlvo " + datAlvo);
+         
+         var msHoje = hoje.getTime();
+         console.log(msHoje);
+         var datAlvo = datAlvo.getTime();
+         console.log(datAlvo);
+         
+         var msDiff = datAlvo - msHoje;
+         console.log(msDiff);
+         
+         var dDiff = msDiff / (1000 * 60 * 60 * 24);
+         console.log("dDiff " + dDiff);
+         console.log(dDiff.toFixed());
+         console.log(Math.floor(dDiff));*/
+
+        /* var msDiff = new Date("December 6, 2078").getTime() - 
+         new Date().getTime();
+         var dias = Math.floor(msDiff/(1000*60*60*24));
+         console.log("Dias " + dias);*/
+
+        var hoje = new Date();
+        console.log("hoje " + hoje);
+        console.log("milisegundos " + hoje.getMilliseconds());
         
-        console.log(Math.ceil(numeroTeste).toFixed(2));
-        console.log(Math.floor(numeroTeste).toFixed(2));
-        
-        
+        hoje.setFullYear(1999);
+        console.log("hoje " + hoje);
+
+        hoje.setMonth(11);
+        console.log("hoje " + hoje);
+
+        hoje.setDate(6);
+        console.log("hoje " + hoje);
+
+        hoje.setHours(22);
+        console.log("hoje " + hoje);
+
+        hoje.setMinutes(30);
+        console.log("hoje " + hoje);
+
+        hoje.setMilliseconds(007);
+        console.log("hoje " + hoje);
+        console.log("milisegundos modificado " + hoje.getMilliseconds());
 
     </script>
 
