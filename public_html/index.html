@@ -12,156 +12,59 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>ENTI Javascript #6</div>
+        <div>ENTI Javascript #9</div> 
+        <br>
+        <a target="_"
+           href="http://www.w3schools.com/jsref/event_onclick.asp">
+            <h1
+                onmouseover="this.style.color = 'green'"
+                onmouseout="this.style.color = 'red'"
+                >ENTI HANGOUT
+            </h1>
+        </a>
+        <br>
+        Nome:
+        <input type="text" size="30" 
+               onfocus="this.style.backgroundColor = 'yellow'"
+               onblur="this.style.backgroundColor = 'red'"
+               />
+        <p></p>
+        <form onsubmit="qualEONome('nome')">
+            Nome:
+            <input id="nome" type="text" size="30" 
+                   onfocus="this.style.backgroundColor = 'yellow'"
+                   onblur="this.style.backgroundColor = 'red'"
+                   />     
+            <!--<button type="submit" onclick="qualEONome(nome)" >
+                Submeter</button>-->
+        </form>
+
+        <p></p>
+        <form>
+            Email:
+            <input id="email" type="text" size="30" 
+                   onfocus="this.style.backgroundColor = 'yellow'"
+                   onblur="this.style.backgroundColor = 'red'"
+                   />     
+            <button type="submit" onclick="qualEOEmail()" >
+                Submeter</button>
+        </form>
+ <p></p>
+        <form>
+            CEP:<br>
+            <input type="text" id="cep" 
+                   onblur="encontreACidade('cep')">
+            <p></p>
+            Cidade:<br>
+            <input type="text" id='cidade'>
+        </form>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
     </body>
-
-    <script>
-        // pop() remove o último elemento
-        // shift() remove o primeiro elemento
-        // push("parâmetro" ou mais) adiciona um elemento na última posição
-        // unshift("parâmetro" ou mais) adiciona um elemento na primeira posição
-        // splice consegue remover e adicionar ao mesmo tempo nome.splice(0,2,"Outro");
-        // slice copia elementos para outro array nome.slice(posição, elemento);
-        //  var nome = ["fernanda", "antônio", "sarah", "amanda", "eduardo", "joão"];
-        // var sobreNome = ["sousa", "castro", "medeiros", "oliveira", "cavalcanti", "ferreira"];
-
-        //   var nomeCompleto = [];
-
-        /*   for(var i=0; i<nome.length; i++){
-         for(var j=0; j<sobreNome.length; j++){ 
-         nomeCompleto.push(nome[i].toLowerCase()+" "+sobreNome[j].toLowerCase());
-         }
-         }*/
-
-        /*   Links
-         * http://devdocs.io
-         */
-
-        /*   var valorBaixo = 1.554;
-         var valorMedio = 1.555;
-         var valorAlto = 1.556;
-         
-         console.log("valorBaixo " + valorBaixo.toFixed(2));
-         console.log("valorMedio " + valorMedio.toFixed(2));
-         console.log("valorAlto " + valorAlto.toFixed(2));
-         
-         //transforma o valorMedio em String
-         var valor = valorMedio.toString();
-         console.log("valor: " + valor);
-         
-         if (valor[4] == "5") {
-         var valorAux = valor.slice(3, 4);
-         
-         //transforma o valorAux em número
-         valorAux = Number(valorAux) + 1;
-         console.log("valorAux " + valorAux);
-         
-         var valorFinal = valor.slice(0, 3) + valorAux;
-         console.log("Tipo " + typeof valorFinal);
-         console.log("valorFinal " + valorFinal);
-         
-         
-         }
-         */
-
-        /*
-         * Date
-         Cria uma instância de JavaScript Date que representa um 
-         único momento no tempo. Os objetos de data são baseados 
-         em um valor de tempo que é o número de milissegundos desde 
-         01 de janeiro de 1970 UTC.
-         */
-
-        /*    var agora = new Date();
-         console.log(typeof agora);
-         console.log("agora " + agora);
-         
-         // agora = agora.toString();
-         //console.log("Data em String " + agora);
-         
-         var hoje = agora.getDay();
-         console.log("hoje " + hoje);
-         
-         var nomesDosDiasDaSemanaBR =
-         ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
-         
-         var nomesDosDiasDaSemanaUS =
-         ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-         
-         var nomeDoDiaDeHojeBR = nomesDosDiasDaSemanaBR[hoje];
-         console.log("Dias da semana BR " + nomeDoDiaDeHojeBR);
-         
-         var mes = agora.getMonth();
-         console.log("mês " + mes);
-         
-         var diaDeHoje = agora.getDate();
-         console.log("dia de hoje " + diaDeHoje);
-         
-         var anoAtual = agora.getFullYear();
-         console.log("Ano atual " + anoAtual);
-         
-         var horarioAtual = agora.getHours();
-         console.log("Horário atual sem os minutos " + horarioAtual);
-         
-         var minutoAtual = agora.getMinutes();
-         console.log("Minuto atual sem os segundos " + minutoAtual);
-         
-         var segundoAtual = agora.getSeconds();
-         console.log("Segundo atual sem os milisegundos " + segundoAtual);
-         
-         var milisegundoAtual = agora.getMilliseconds();
-         console.log("milisegundos " + milisegundoAtual);        
-         */
-
-        /*http://momentjs.com/
-         uma das libraries mais conhecidas de manipulação de datas em JS*/
-        /* var hoje = new Date();
-         var datAlvo = new Date("December 6, 2078");
-         console.log("datAlvo " + datAlvo);
-         
-         var msHoje = hoje.getTime();
-         console.log(msHoje);
-         var datAlvo = datAlvo.getTime();
-         console.log(datAlvo);
-         
-         var msDiff = datAlvo - msHoje;
-         console.log(msDiff);
-         
-         var dDiff = msDiff / (1000 * 60 * 60 * 24);
-         console.log("dDiff " + dDiff);
-         console.log(dDiff.toFixed());
-         console.log(Math.floor(dDiff));*/
-
-        /* var msDiff = new Date("December 6, 2078").getTime() - 
-         new Date().getTime();
-         var dias = Math.floor(msDiff/(1000*60*60*24));
-         console.log("Dias " + dias);*/
-
-        var hoje = new Date();
-        console.log("hoje " + hoje);
-        console.log("milisegundos " + hoje.getMilliseconds());
-        
-        hoje.setFullYear(1999);
-        console.log("hoje " + hoje);
-
-        hoje.setMonth(11);
-        console.log("hoje " + hoje);
-
-        hoje.setDate(6);
-        console.log("hoje " + hoje);
-
-        hoje.setHours(22);
-        console.log("hoje " + hoje);
-
-        hoje.setMinutes(30);
-        console.log("hoje " + hoje);
-
-        hoje.setMilliseconds(007);
-        console.log("hoje " + hoje);
-        console.log("milisegundos modificado " + hoje.getMilliseconds());
-
-    </script>
-
-
+    <script src="js/enti.js" type="text/javascript"></script>
+    <script src="js/teste.js" type="text/javascript"></script>
 </html>
 
